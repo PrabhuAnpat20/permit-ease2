@@ -10,17 +10,17 @@ export default function page() {
             <div className=' bg-white text-center p-4 rounded-md shadow-md'>
                 <p className=' font-bold text-xl'>PICT ACM Student Chapter</p>
                 <img src="acm.png" alt="" className=' mx-auto' />
-                <button className=" bg-[#155EB3] text-white p-2 px-3 rounded-sm font-bold my-2 text-sm">View Permissions</button>
+                <button className=" bg-[#155EB3] text-white p-2 px-6 rounded-md font-bold my-2 text-sm">View</button>
             </div>
             <div className=' bg-white text-center p-4 rounded-md shadow-md'>
                 <p className=' font-bold text-xl'>PICT ACM Student Chapter</p>
                 <img src="acm.png" alt="" className=' mx-auto' />
-                <button className=" bg-[#155EB3] text-white p-2 px-3 rounded-sm font-bold my-2 text-sm">View Permissions</button>
+                <button className=" bg-[#155EB3] text-white p-2 px-6 rounded-md font-bold my-2 text-sm">View</button>
             </div>
             <div className=' bg-white text-center p-4 rounded-md shadow-md'>
                 <p className=' font-bold text-xl'>PICT ACM Student Chapter</p>
                 <img src="acm.png" alt="" className=' mx-auto' />
-                <button className=" bg-[#155EB3] text-white p-2 px-3 rounded-sm font-bold my-2 text-sm">View Permissions</button>
+                <button className=" bg-[#155EB3] text-white p-2 px-6 rounded-md font-bold my-2 text-sm">View </button>
             </div>
             </div> 
     </div>
