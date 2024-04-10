@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import EventList from "../EventList";
-import "boxicons";
+// import "boxicons";
 export default function page() {
   return (
     <>
@@ -18,12 +18,12 @@ export default function page() {
           <div className=" flex">
             <div className=" my-auto mr-3">
               <div className=" my-1">
-                <box-icon
+                {/* <box-icon
                   name="calendar-alt"
                   type="solid"
                   color="#155eb3"
                   size="md"
-                ></box-icon>
+                ></box-icon> */}
               </div>
             </div>
 

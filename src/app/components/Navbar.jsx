@@ -1,13 +1,21 @@
 "use client";
 
+import { useAuthContext } from "@/hooks/useAuthContext";
+import { useLogout } from "@/hooks/useLogout";
 import Link from "next/link";
+
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 function Navbar() {
   const [nav, setNav] = useState(false);
+  const {user}=useAuthContext();
+  const {logout}=useLogout();
+  
   const handleNav = () => {
     setNav(!nav);
   };
+ 
+
 
   return (
     <>
@@ -19,19 +27,37 @@ function Navbar() {
               Permit-Ease
             </p>
           </div>
-          <div className=" flex my-auto text-white p-5 font-bold  text-xl ">
-            <Link href="HomeUser">
-              <p className=" mx-8">Home</p>
-            </Link>
-            <p className=" mx-8">About</p>
-            <Link href="UserEvents">
-              <p className=" mx-8">Events</p>
-            </Link>
-          </div>
+          {user &&
+           <div className=" flex my-auto text-white p-5 font-bold  text-xl ">
+           <Link href="HomeUser">
+             <p className=" mx-8">Home</p>
+           </Link>
+           <p className=" mx-8">About</p>
+           {user === "club" && (
+             <Link href="UserEvents">
+               <p className="mx-8">Events</p>
+             </Link>
+           )}
+             {user === "admin" && (
+             <Link href="clubs">
+               <p className="mx-8">Clubs</p>
+             </Link>
+           )}
+           
+           {user &&
+           <Link href="/">
+           <button className="text-red-700" onClick={logout}>
+             Logout
+           </button>
+         </Link>}
+         </div>
+          }
+         
         </div>
       </div>
 
       {/* mobile navbar */}
+     
       <div className=" block md:hidden">
         <div className=" bg-[#155EB3] flex p-2 justify-between">
           <div className=" flex">
@@ -40,7 +66,10 @@ function Navbar() {
               Permit-Ease
             </p>
           </div>
-          <div className=" my-auto p-5">
+
+          {
+            user &&
+            <div className=" my-auto p-5">
             <div
               onClick={handleNav}
               className=" cursor-pointer block md:hidden"
@@ -52,17 +81,32 @@ function Navbar() {
               )}
             </div>
           </div>
+          }
+          
         </div>
-        {nav && (
+        {nav && user && (
           <div className=" font-bold p-2  text-center  bg-slate-100 text-[#155EB3] py-6">
             <Link href="HomeUser">
               <p className=" my-1">Home</p>
             </Link>
 
             <p className=" my-1">About</p>
-            <Link href="UserEvents">
-              <p className=" my-1">Event</p>
-            </Link>
+            {user === "club" && (
+              <Link href="UserEvents">
+                <p className="my-1">Events</p>
+              </Link>
+            )}
+              {user === "admin" && (
+              <Link href="clubs">
+                <p className="my-1">Clubs</p>
+              </Link>
+            )}
+            {user &&
+             <Link href="/">
+             <button className="text-red-700" onClick={logout}>
+               Logout
+             </button>
+           </Link>}
           </div>
         )}
       </div>
