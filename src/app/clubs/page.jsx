@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from "next/link";
 export default function page() {
   return (
     <>
@@ -10,7 +10,10 @@ export default function page() {
             <div className=' bg-white text-center p-4 rounded-md shadow-md'>
                 <p className=' font-bold text-xl'>PICT ACM Student Chapter</p>
                 <img src="acm.png" alt="" className=' mx-auto' />
-                <button className=" bg-[#155EB3] text-white p-2 px-6 rounded-md font-bold my-2 text-sm">View</button>
+              <Link href="/pasc">
+              <button className=" bg-[#155EB3] text-white p-2 px-6 rounded-md font-bold my-2 text-sm">View</button>
+              </Link>
+                
             </div>
             <div className=' bg-white text-center p-4 rounded-md shadow-md'>
                 <p className=' font-bold text-xl'>PICT ACM Student Chapter</p>
