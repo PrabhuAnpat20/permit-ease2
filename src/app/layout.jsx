@@ -1,19 +1,15 @@
-
-
 import { Inter } from "next/font/google";
+import Head from 'next/head';
 import { Roboto } from 'next/font/google'
 import { useAuthContext } from "@/hooks/useAuthContext";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { AuthContextProvider } from "@/context/authContext";
 
-// const inter = Inter({ subsets: ["latin"] });
-
-
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
-})
+});
 
 export const metadata = {
   title: "Permit-Ease",
@@ -21,20 +17,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
- 
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        {/* Add more favicon sizes if necessary */}
+      </Head>
       <body className={roboto.className}>
         <AuthContextProvider>
-          
-           <Navbar/>
-          
-        
-        {children}
+          <Navbar />
+          {children}
         </AuthContextProvider>
-        
-        </body>
+      </body>
     </html>
   );
 }
