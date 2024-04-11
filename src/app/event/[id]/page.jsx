@@ -1,6 +1,8 @@
 "use client"
 import React from "react";
 import 'boxicons'
+import { BiSolidFilePdf } from "react-icons/bi";
+
 import Link from "next/link";
 export default function page() {
   return (
@@ -13,8 +15,9 @@ export default function page() {
         
         <p className=" my-auto">Pratik Ratadiya Session</p>
         </div>
-        <Link href="addPermission">
+        <Link href="/addPermission/1">
           <div className=" my-4">
+            
           <p >+ Add Permission</p>
           </div>
         
@@ -41,6 +44,14 @@ export default function page() {
         </div>
 
         <div className=" flex justify-end  ">
+          <Link href="/pdf">
+          <div className=" my-auto mx-2">
+          <BiSolidFilePdf  color="#155EB3"  size={32}  />
+          </div>
+          </Link>
+         
+      
+
           <p className=" bg-green-300 text-green-600 font-bold p-1 px-3 rounded-tl-lg">
             Approved
           </p>
@@ -66,8 +77,8 @@ export default function page() {
         </div>
 
         <div className=" flex justify-end  ">
-          <p className=" bg-green-300 text-green-600 font-bold p-1 px-3 rounded-tl-lg">
-            Approved
+        <p className=" bg-yellow-300 text-yellow-600 font-bold p-1 px-4 rounded-tl-lg">
+            Pending
           </p>
         </div>
       </div>
@@ -92,8 +103,8 @@ export default function page() {
         </div>
 
         <div className=" flex justify-end  ">
-          <p className=" bg-green-300 text-green-600 font-bold p-1 px-3 rounded-tl-lg">
-            Approved
+          <p className=" bg-yellow-300 text-yellow-600 font-bold p-1 px-4 rounded-tl-lg">
+            Pending
           </p>
         </div>
       </div>

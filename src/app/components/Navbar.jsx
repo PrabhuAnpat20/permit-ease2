@@ -32,7 +32,7 @@ function Navbar() {
            <Link href="HomeUser">
              <p className=" mx-8">Home</p>
            </Link>
-           <p className=" mx-8">About</p>
+           {/* <p className=" mx-8">About</p> */}
            {user === "club" && (
              <Link href="UserEvents">
                <p className="mx-8">Events</p>
@@ -46,8 +46,8 @@ function Navbar() {
            
            {user &&
            <Link href="/">
-           <button className="text-red-700" onClick={logout}>
-             Logout
+           <button className="mx-8 p-1 text-sm bg-red-500 rounded-md px-3 text-white" onClick={logout}>
+             Log out
            </button>
          </Link>}
          </div>

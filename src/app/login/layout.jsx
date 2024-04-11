@@ -21,7 +21,7 @@ export default function LoginLayout({ children }) {
     <div className="bg-slate-50 mx-4 text-center shadow-xl rounded-sm 
      ">
       <div className=" flex flex-col md:flex-row  ">
-        <div className=" mx-auto md:mx-0  bg-white w-full md:h-full md:w-2/3">
+        <div className=" mx-auto md:mx-0  bg-white w-full md:h-full md:w-1/2">
           <img src="/login.png" alt="login" className=" mx-auto  md:w-[700px]"/>
         </div>
         <div className=" md:my-auto md:mx-auto">
