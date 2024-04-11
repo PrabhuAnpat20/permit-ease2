@@ -2,7 +2,7 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { useLogin } from "@/hooks/useLogin";
-export default function page() {
+export default function Page() {
   const { login } = useLogin();
   const router = useRouter()
   const handleSubmit = (user) => {
