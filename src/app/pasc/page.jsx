@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 
 export default function page() {
@@ -35,9 +35,12 @@ export default function page() {
           </div>
 
           <div className=" flex justify-center pb-9  ">
+            <Link href="/reply/1">
             <button className=" bg-green-300 text-green-600 font-bold p-1 px-3 rounded-lg mx-4">
               Approve
             </button>
+            </Link>
+            
             <button className=" bg-[#E9673E] text-[#A10606] font-bold p-1 px-5 rounded-lg mx-4">
               Reject
             </button>
