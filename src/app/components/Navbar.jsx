@@ -32,7 +32,7 @@ function Navbar() {
            <Link href="HomeUser">
              <p className=" mx-8">Home</p>
            </Link>
-           {/* <p className=" mx-8">About</p> */}
+          
            {user === "club" && (
              <Link href="UserEvents">
                <p className="mx-8">Events</p>
@@ -87,18 +87,18 @@ function Navbar() {
         {nav && user && (
           <div className=" font-bold p-2  text-center  bg-slate-100 text-[#155EB3] py-6">
             <Link href="HomeUser">
-              <p className=" my-1">Home</p>
+              <p className=" my-1"  onClick={handleNav}>Home</p>
             </Link>
 
             <p className=" my-1">About</p>
             {user === "club" && (
               <Link href="UserEvents">
-                <p className="my-1">Events</p>
+                <p className="my-1"  onClick={handleNav}>Events</p>
               </Link>
             )}
               {user === "admin" && (
               <Link href="clubs">
-                <p className="my-1">Clubs</p>
+                <p className="my-1"  onClick={handleNav}>Clubs</p>
               </Link>
             )}
             {user &&
